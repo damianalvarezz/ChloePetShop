@@ -1,0 +1,259 @@
+/* Medias Queries  */
+
+
+/* tablet */
+@media (max-width:768px) {
+    .productos{
+        .alimentos{
+            .alimento{
+                a{ 
+                    img{
+                        width: 150px;
+                        height: 150px
+                    }
+                }
+            }
+        }
+    }
+    .accesorios{
+        .conteiner-accesorios{
+            .accesorio{
+                flex-wrap: nowrap;
+                a{
+                    img{
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+                
+            }
+            .accesorio:nth-child(1){
+                height: 85%;
+            }
+            .accesorio:nth-child(2){
+                height: 85%;
+            }
+            .accesorio:nth-child(3){
+                img{
+                    width: 100%;
+                    height: 85%;
+                    background-color: black;
+                }
+                
+            }
+        }
+        
+    }
+}
+/* Movil L */
+@media (max-width:426px) {
+    *{
+        font-size: 11px;
+    }
+    .productos{
+        .alimentos{
+            .alimento{
+                a{ 
+                    img{
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+    .accesorios{
+        .conteiner-accesorios{
+            .accesorio{
+                a{
+                    img{
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+    main {
+        section{
+            .conteiner{
+                .info1{
+                    height: 250px;
+                }
+            }
+        }
+    }
+    main {
+        section{
+            .conteiner{
+                .info2{
+                    height: 250px;
+                    .info2-nuestrahistoria{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+    main {
+        section{
+            .conteiner{
+                .info3{
+                    height: 250px;
+                }
+            }
+        }
+    }
+    main{
+        .instagram{
+            .conteiner-instagram-fotos{
+                .instagram-foto{
+                    height: 100px;
+                }
+            }
+        }
+    }
+    footer{
+        .footer-1{
+            .correo{
+                span{
+                    font-size: 10px;
+                }
+            }
+            p{
+                font-size: 10px;
+            }
+            img{
+                width: 20px;
+            }
+        }
+        .footer-2{
+            a{
+                font-size: 10px;
+            }
+        }
+        .footer-3{
+            a{
+                font-size: 10px;
+            }
+        }
+        .footer-4{
+            a{
+                font-size: 10px;
+            }
+            img{
+                width: 20px;
+            }
+        }
+    }
+
+}
+/* Movil M */
+@media (max-width:376px) {
+    *{
+        font-size: 9px;
+    }
+    .accesorios{
+        .conteiner-accesorios{
+            .accesorio{
+                a{
+                    img{
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+    
+}
+/* Movil S */
+@media (max-width:321px) {
+    *{
+        font-size: 7px;
+    }
+    main{
+        .historia{
+            .conteiner{
+                .info2{
+                    .info2-nuestrahistoria{
+                        span{
+                            font-size: 7px;
+                        }
+                    }
+                }
+            }
+        }
+        .instagram{
+            .header-seccion{
+                h2{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    main {
+            .historia{
+                .conteiner{
+                    .info3{
+                        .boton{
+                            width: 58px;
+                        }
+                    }
+                }
+            }
+            
+        }
+    .accesorios{
+        .conteiner-accesorios{
+            .accesorio{
+                a{
+                    img{
+                        width: 70px;
+                        height: 70px;
+                    }
+                }
+                
+            }
+        }
+        
+    }
+    footer{
+        .footer-1{
+            .correo{
+                span{
+                    font-size: 7px;
+                }
+            }
+            p{
+                font-size: 7px;
+            }
+            img{
+                width: 10px;
+            }
+        }
+        .footer-2{
+            a{
+                font-size: 7px;
+            }
+        }
+        .footer-3{
+            a{
+                font-size: 7px;
+            }
+        }
+        .footer-4{
+            a{
+                font-size: 7px;
+            }
+            img {
+                width: 10px;
+            }
+        }
+    }
+    
+}

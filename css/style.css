@@ -1,804 +1,600 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;1,300&display=swap");
 /*reset y font general  */
-*{ 
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    list-style: none;
-    text-decoration: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  list-style: none;
+  text-decoration: none; }
 
-    
-}
+header {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  align-items: center;
+  gap: 0px;
+  position: fixed;
+  width: 100%;
+  top: 0; }
+  header ul {
+    display: flex; }
+    header ul li a {
+      display: inline-block;
+      padding: 8px 5px 8px 5px;
+      color: black; }
+  header h1 {
+    color: black; }
+  header img {
+    width: 20px; }
 
-header{
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(8px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    padding: 15px;
-    
-}
-header h1{
-    display: inline-block;
-}
-header a img{
-    width: 20px;
-}
-
-header .navbar li{
-    display: inline-block;
-    padding: 0 2px;
-}
-a{
-    color: black;
-}
-.bag{
-    width: 20px;
-}
-main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-    
-}
-main section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 60px 0px 0px 0px;
-    
-    
-}
-.productos{
+main {
+  /* section de accesorios */ }
+  main a {
+    color: black; }
+  main .instagram {
+    flex-direction: column; }
+    main .instagram .header-seccion {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      flex-wrap: no-wrap;
+      align-items: center;
+      gap: 0px; }
+      main .instagram .header-seccion h2 {
+        font-size: 36px;
+        margin-bottom: 15px;
+        padding: 0; }
+    main .instagram .conteiner-instagram-fotos {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: no-wrap;
+      align-items: center;
+      gap: 0px;
+      width: 100%; }
+      main .instagram .conteiner-instagram-fotos .instagram-foto {
+        width: 25%;
+        height: 300px;
+        border-radius: 26px;
+        margin: 5px; }
+      main .instagram .conteiner-instagram-fotos .instagram-foto:nth-child(1) {
+        background-image: url(../assets/img/insta1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      main .instagram .conteiner-instagram-fotos .instagram-foto:nth-child(2) {
+        background-image: url(../assets/img/insta2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      main .instagram .conteiner-instagram-fotos .instagram-foto:nth-child(3) {
+        background-image: url(../assets/img/insta3.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+      main .instagram .conteiner-instagram-fotos .instagram-foto:nth-child(4) {
+        background-image: url(../assets/img/insta4.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; }
+  main .productos {
     display: grid;
     justify-content: center;
-    grid-template-rows: 100px, repeat(2,1fr);
-    grid-template-areas: 
-    "header"
-    "alimentos"
-    "comprar";
-}
-
-/* header de la seccion  */
-.header-section{
-    display: flex;
-    justify-content: space-between;
-    grid-area: header;
-    margin: 10px;
-}
-/* grilla con todos los alimentos */
-.alimentos{
-    display: grid;
-    grid-area: alimentos;
-    gap: 10px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
-    justify-content: center;
-}
-.alimento{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
-    background-color: #F2F2F2 ;
-    border-radius: 26px;
-}
-.alimento a img{
-    width: 300px;
-    height: 300px;
-}
-/* informacion inferior de la card */
-.alimento-info{
-    display: grid;
-    justify-content: space-between;
-    width: 100%;
-    margin: 10px;
-    grid-template-columns: 2, 1fr;
-    grid-template-rows: 2, 1fr;
-    grid-template-areas: 
-    "titulo ."
-    "subtitulo precio ";
-    
-}
-.alimento-titulo{
-    grid-area: titulo;
-    
-}
-.alimento-subtitulo{
-    grid-area: subtitulo;
-}
-.alimento-precio{
-    grid-area: precio;
-    
-}
-/* boton comprar */
-.comprar{
-    grid-area: comprar;
-    color: black;
-    font-weight: 500;
-    background-color: #C1F651;
-    width: 150px;
-    padding: 20px;
-    margin-top: 10px;
-    text-align: center;
-    border-radius: 26px;
-    justify-self: end;
-    
-}
-/* section de accesorios */
-.accesorios{
+    grid-template-rows: 100px, repeat(2, 1fr);
+    grid-template-areas: "header" "alimentos" "comprar"; }
+  main .accesorios {
     background-color: black;
     color: white;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 100px, 1fr;
-    grid-template-areas: 
-    "header"
-    "accesorios";
-}
-.conteiner-accesorios{
-    display: grid;
-    grid-area: accesorios;
-    gap: 10px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
-    grid-template-areas: 
-    "item1 item3 item3"
-    "item2 item3 item3";
-    justify-content: center;
-    margin-bottom: 20px; /* separo un poco del borde de abajo */
-}
-.accesorio img{
-    width: 300px;
-    height: 300px;
-}
-.accesorio {
+    grid-template-areas: "header" "accesorios"; }
+  main .historia {
+    width: 100%;
+    margin: 15px;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column; /* le pongo column porque se pone alado sino, en wrap no hace falta pero lo dejo igual que las otras cards */
-    align-items: center;
-
-    width: 90%;
-    height: 100%;
-    background-color: #F2F2F2 ;
-    border-radius: 26px;
-    color: black;
-    
-}
-.accesorio-info{
-    display: grid;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px; /*para que no quede pegado al margen de la card */
-    grid-template-columns: 2, 1fr;
-    grid-template-rows: 2, 1fr;
-    grid-template-areas: 
-    "titulo ."
-    "subtitulo precio";
-    
-}
-.accesorio-titulo{
-    grid-area: titulo;
-}
-.accesorio-subtitulo{
-    grid-area: subtitulo;
-}
-.accesorio-precio{
-    grid-area: precio;
-}
-.accesorio:nth-child(1){
-    grid-area: item1;
-}
-.accesorio:nth-child(2){
-    grid-area: item2;
-}
-.accesorio:nth-child(3){
-    grid-area: item3;
-    justify-self: center;
-    align-self: center;
-    
-}
-.accesorio:nth-child(3) img{
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-}
-.accesorio:nth-child(3) a{
-    width: 100%;
-}
-
-/* main .accesorios{
-    background-color: black;
     justify-content: center;
-    
+    flex-direction: row;
+    flex-wrap: no-wrap;
     align-items: center;
-    
-}
-main .accesorios h2{
-    color: white;
-    padding-left: 76.725px;
-    padding-right: 1000px;
-} */
-main section .contacto{
+    gap: 0px; }
+    main .historia .conteiner {
+      display: flex;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 75%; }
+      main .historia .conteiner .info1 {
+        background-color: #F2F2F2;
+        background-image: url(../assets/img/Poodle-PNG-Free-Image.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 33%;
+        height: 500px;
+        border-radius: 36px 0px 0px 36px; }
+      main .historia .conteiner .info2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: black;
+        width: 33%;
+        height: 500px; }
+        main .historia .conteiner .info2 .info2-nuestrahistoria {
+          background-color: white;
+          color: black;
+          text-align: center;
+          padding: 10px;
+          border-radius: 26px; }
+          main .historia .conteiner .info2 .info2-nuestrahistoria span {
+            font-size: 15px; }
+        main .historia .conteiner .info2 h2 {
+          /* font-size: 16px; */
+          display: inline-block;
+          padding: 75px; }
+      main .historia .conteiner .info3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: solid #D9D9D9;
+        width: 33%;
+        height: 500px;
+        border-radius: 0px 36px 36px 0px; }
+        main .historia .conteiner .info3 .boton {
+          background-color: #222222;
+          color: white;
+          border-radius: 36px;
+          width: 100px;
+          height: 40px;
+          margin: 12px 0px 12px 5px; }
+        main .historia .conteiner .info3 p {
+          font-family: 'Source Serif Pro', serif;
+          text-align: center; }
+  main section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* header de la seccion  */ }
+    main section .slide {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      text-transform: capitalize;
+      justify-content: end;
+      text-indent: 5px;
+      width: 1000px;
+      height: 500px;
+      margin: 60px 0px 0px 0px;
+      background-image: url(../assets/img/slider.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 26px; }
+      main section .slide .boton {
+        background-color: #C1F651;
+        border: #C1F651;
+        border-radius: 36px;
+        width: 100px;
+        height: 40px;
+        margin: 12px 0px 12px 5px; }
+    main section .header-section {
+      display: flex;
+      justify-content: space-between;
+      grid-area: header;
+      margin: 10px; }
+    main section .alimentos {
+      display: grid;
+      grid-area: alimentos;
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: center; }
+    main section .alimento {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: #F2F2F2;
+      border-radius: 26px; }
+    main section .alimento a img {
+      width: 300px;
+      height: 300px; }
+    main section .alimento-info {
+      display: grid;
+      justify-content: space-between;
+      width: 100%;
+      margin: 10px;
+      grid-template-columns: 2, 1fr;
+      grid-template-rows: 2, 1fr;
+      grid-template-areas: "titulo ." "subtitulo precio "; }
+    main section .alimento-titulo {
+      grid-area: titulo; }
+    main section .alimento-subtitulo {
+      grid-area: subtitulo; }
+    main section .alimento-precio {
+      grid-area: precio; }
+    main section .comprar {
+      grid-area: comprar;
+      color: black;
+      font-weight: 500;
+      background-color: #C1F651;
+      width: 150px;
+      padding: 20px;
+      margin-top: 10px;
+      text-align: center;
+      border-radius: 26px;
+      justify-self: end; }
+    main section .conteiner-accesorios {
+      display: grid;
+      grid-area: accesorios;
+      gap: 10px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "item1 item3 item3" "item2 item3 item3";
+      justify-content: center;
+      margin-bottom: 20px;
+      /* separo un poco del borde de abajo */ }
+    main section .accesorio img {
+      width: 300px;
+      height: 300px; }
+    main section .accesorio {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      /* le pongo column porque se pone alado sino, en wrap no hace falta pero lo dejo igual que las otras cards */
+      align-items: center;
+      width: 90%;
+      height: 100%;
+      background-color: #F2F2F2;
+      border-radius: 26px;
+      color: black; }
+    main section .accesorio-info {
+      display: grid;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 10px;
+      /*para que no quede pegado al margen de la card */
+      grid-template-columns: 2, 1fr;
+      grid-template-rows: 2, 1fr;
+      grid-template-areas: "titulo ." "subtitulo precio"; }
+    main section .accesorio-titulo {
+      grid-area: titulo; }
+    main section .accesorio-subtitulo {
+      grid-area: subtitulo; }
+    main section .accesorio-precio {
+      grid-area: precio; }
+    main section .accesorio:nth-child(1) {
+      grid-area: item1; }
+    main section .accesorio:nth-child(2) {
+      grid-area: item2; }
+    main section .accesorio:nth-child(3) {
+      grid-area: item3;
+      justify-self: center;
+      align-self: center; }
+    main section .accesorio:nth-child(3) img {
+      width: 100%;
+      height: 100vh;
+      background-color: black; }
+    main section .accesorio:nth-child(3) a {
+      width: 100%; }
+
+main .header-seccion {
+  display: flex;
+  justify-content: space-between; }
+
+main section .boton {
+  background-color: #C1F651;
+  border: #C1F651;
+  border-radius: 36px;
+  width: 100px;
+  height: 40px; }
+
+main section .conteiner-alimentos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 60px; }
+
+main section .card {
+  background-color: #F2F2F2;
+  width: 400px;
+  height: 500px;
+  border-radius: 26px;
+  margin: 5px; }
+  main section .card .contenido {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    width: 100%;
+    /*importante aclarar el tamano de la carta para poder centrar y demas. */
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 1000px;
-    height: 500px;
-}
-main section .contacto input{
-    
-    background-color: #D9D9D9;
+    justify-content: end;
+    align-items: start; }
+    main section .card .contenido a {
+      color: #222222;
+      display: inline-block;
+      margin: 0px 0px 15px 15px; }
+
+main section .contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1000px;
+  height: 500px; }
+  main section .contacto .boton {
+    background-color: #C1F651;
+    border: #C1F651;
     border-radius: 36px;
-}
-main section .contacto .row{
-    margin: 10px;
-}
-.mensaje{
-    margin-left: 135px;
-    text-align: center;
-}
-input[type=text] {
+    width: 100px;
+    height: 40px; }
+  main section .contacto input {
+    background-color: #D9D9D9;
+    border-radius: 36px; }
+  main section .contacto input[type=text] {
     width: 50%;
     padding: 12px 20px;
-    border: 2px solid #ccc;
-}
-input[type=email] {
+    border: 2px solid #ccc; }
+  main section .contacto input[type=email] {
     width: 50%;
     padding: 12px 20px;
-    border: 2px solid #ccc;
-}
-textarea{
+    border: 2px solid #ccc; }
+  main section .contacto textarea {
     width: 100%;
     height: 150px;
     padding: 12px 20px;
     border: 2px solid #ccc;
     border-radius: 36px;
     background-color: #D9D9D9;
-    resize: none;
-}
-main section .conteiner-producto{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 1000%;
-    height: 500px;
-    
-}
-main section .conteiner-producto .producto{
+    resize: none; }
+  main section .contacto .row {
+    margin: 10px; }
+  main section .contacto .mensaje {
+    margin-left: 135px;
+    text-align: center; }
+
+main section .conteiner-faqs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px; }
+  main section .conteiner-faqs h2 {
+    font-size: 36px; }
+  main section .conteiner-faqs h3 {
+    margin-top: 15px; }
+
+main section .faqs-parrafo {
+  width: 70%;
+  margin-top: 15px;
+  margin-bottom: 30px; }
+
+main section .conteiner-producto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  margin-top: 40px; }
+  main section .conteiner-producto .producto {
     background-color: #D9D9D9;
     border-radius: 36px;
-    background-position:center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
     width: 50%;
-    height: 500px;
-}
-main section .conteiner-producto .caracteristicas{
+    height: 500px; }
+  main section .conteiner-producto .caracteristicas {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    
     width: 50%;
-    height: 500px;
-}
-main section .conteiner-producto .caracteristicas .header-carac{
-    display: flex;
-}
-main section .conteiner-producto .caracteristicas .header-carac span{
-    margin-left: 50px;
-}
-main section .conteiner-producto .caracteristicas .agregar .boton{
-    width: 200px;
-    height: 50px;
-    margin-bottom: 15px;
-}
-main section .conteiner-info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    height: 500px;
-    margin-bottom: 30px;
-}
-main section .conteiner-info .producto-info1{
+    height: 500px; }
+    main section .conteiner-producto .caracteristicas .header-carac {
+      display: flex; }
+      main section .conteiner-producto .caracteristicas .header-carac span {
+        margin-left: 50px; }
+    main section .conteiner-producto .caracteristicas .agregar .boton {
+      width: 200px;
+      height: 50px;
+      margin-bottom: 15px; }
+
+main section .conteiner-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 500px;
+  margin-top: 40px;
+  margin-bottom: 30px; }
+  main section .conteiner-info .producto-info1 {
     background-image: url(../assets/img/samia-liamani-9lVdutKM9vg-unsplash.jpg);
     background-color: #D9D9D9;
     border-radius: 36px 0px 0px 36px;
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-    height: 500px;
-}
-main section .conteiner-info .producto-info2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    background-color: black;
-    color: white;
-    border-radius: 0px 36px 36px 0px;
-    
-    width: 50%;
-    height: 500px;
-}
-main section .conteiner-info .producto-info2 p{
-    text-align: center;
-    font-size: 26px;
-    font-family: 'Source Serif Pro', serif; 
-}
-main section .conteiner-alimentos{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 60px;
-}
-main section .contacto .boton{
-    background-color: #C1F651;
-}
-
-main section .slide {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    text-transform: capitalize;
-    justify-content: end;
-    text-indent: 5px;
-    
-    width: 1000px;
-    height: 500px;
-    margin: 60px 0px 0px 0px;
-    background-image: url(../assets/img/slider.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 26px;
-}
-main section .slide .boton{
-    background-color: #C1F651;
-    border: #C1F651;
-    border-radius: 36px;
-    width: 100px;
-    height: 40px;
-    margin: 12px 0px 12px 5px;
-}
-main .header-seccion{
-    display: flex;
-    justify-content: space-between;
-}
-main .header-seccion-contacto h2{
-    margin-bottom: 10px;
-    font-size: 36px;
-    
-    
-}
-main .header-seccion h2{
-
-    display: inline;
-    padding-right: 1000px;
-    padding-right: 1000px;
-}
-main section .conteiner-faqs{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-main section .conteiner-faqs h2{
-    font-size: 36px;
-}
-main section .conteiner-faqs h3{
-    margin-top: 15px;
-}
-main section .faqs-parrafo {
-    width: 70%;
-    margin-top: 15px;
-    margin-bottom: 30px;
-}
-main section .boton{
-    background-color: #C1F651;
-    border: #C1F651;
-    border-radius: 36px;
-    width: 100px;
-    height: 40px;
-}
-main  .historia{
+    width: 50%;
+    height: 500px; }
+  main section .conteiner-info .producto-info2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin: 15px;
-}
-main section .conteiner{
-    
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-
-}
-
-main section .conteiner .info1{
-    background-color: #F2F2F2;
-    background-image: url(../assets/img/Poodle-PNG-Free-Image.png);
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 33%;
-    height: 500px;
-    border-radius: 36px 0px 0px 36px;
-}
-main section .conteiner .info2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
     background-color: black;
-    width: 33%;
-    height: 500px;
-}
-main section .conteiner .info2 .info2-nuestrahistoria{
-    background-color: white;
-    color: black;
-    text-align: center;
-    padding: 10px;
-    border-radius: 26px;
-}
-main section .conteiner .info2  h2{
-    /* font-size: 16px; */
-    display: inline-block;
-    padding: 75px;
-}
-main section .conteiner .info2 .info2-nuestrahistoria span{
-    font-size: 15px;
-}
-
-main section .conteiner .info3{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: solid #D9D9D9;
-    width: 33%;
-    height: 500px;
+    color: white;
     border-radius: 0px 36px 36px 0px;
-}
-main section .conteiner .info3 .boton{
-    background-color: #222222;
-    color: white;
-    border-radius: 36px;
-    width: 100px;
-    height: 40px;
-    margin: 12px 0px 12px 5px;
-}
-main section .conteiner .info3 p{
-    font-family: 'Source Serif Pro', serif;
-    text-align: center;
-}
-main  .instagram .header-seccion{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-main .instagram .header-seccion h2{ /*Corrijo el padding por respespecto a los otros header-seccion */
-    font-size: 36px;
-    margin-bottom: 15px;
-    padding: 0;
-}
-main .instagram .header-seccion a{
-    color: black;
-}
-main .instagram .conteiner-instagram-fotos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    /* width: 1000px; comento por las dudas
-    height: 500px; */
-}
-main .instagram .conteiner-instagram-fotos .instagram-foto{
-    
-    width: 25%;
-    height: 300px;
-    border-radius: 26px;
-    margin: 5px;
-}
-main .instagram .conteiner-instagram-fotos .instagram-foto:nth-child(1){
-    background-image: url(../assets/img/insta1.jpg);
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 50%;
+    height: 500px; }
+    main section .conteiner-info .producto-info2 p {
+      text-align: center;
+      font-size: 26px;
+      font-family: 'Source Serif Pro', serif; }
 
-}
-main .instagram .conteiner-instagram-fotos .instagram-foto:nth-child(2){
-    background-image: url(../assets/img/insta2.jpg);
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-main .instagram .conteiner-instagram-fotos .instagram-foto:nth-child(3){
-    background-image: url(../assets/img/insta3.jpg);
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-main .instagram .conteiner-instagram-fotos .instagram-foto:nth-child(4){
-    background-image: url(../assets/img/insta4.jpg);
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-footer{
-    display: flex;
-    background-color: black;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    border: solid;
-}
-footer .footer-1{
+footer {
+  display: flex;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: solid; }
+  footer .footer-1 {
     color: white;
     width: 25%;
-    height: 300px;
-}
-footer .footer-1 .correo{
+    height: 300px; }
+    footer .footer-1 .correo {
+      text-align: center;
+      border: solid white;
+      margin-top: 10%;
+      margin-bottom: 25%;
+      padding: 15px;
+      border-radius: 26px; }
+      footer .footer-1 .correo span {
+        font-size: 15px; }
+    footer .footer-1 p {
+      font-size: 15px;
+      margin-top: 3%; }
+  footer .footer-2 {
+    color: white;
     text-align: center;
-    border: solid white;
-    margin-top: 10%;
-    margin-bottom: 25%;
-    padding: 15px;
-    border-radius: 26px;
-}
+    width: 25%;
+    height: 300px; }
+    footer .footer-2 a {
+      font-size: 15px;
+      display: block;
+      margin-bottom: 5%;
+      color: white; }
+    footer .footer-2 span {
+      display: inline-block;
+      margin-bottom: 10%; }
+  footer .footer-3 {
+    color: white;
+    text-align: center;
+    width: 25%;
+    height: 300px; }
+    footer .footer-3 a {
+      font-size: 15px;
+      display: block;
+      margin-bottom: 5%;
+      color: white; }
+    footer .footer-3 span {
+      display: inline-block;
+      margin-bottom: 10%; }
+  footer .footer-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 300px; }
+    footer .footer-4 a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      color: white;
+      padding-left: 10px; }
+    footer .footer-4 img {
+      width: 40px; }
 
-footer .footer-1 p{
-    font-size: 15px;
-    margin-top: 3%;
-}
-footer .footer-1 .correo span{
-    
-    font-size: 15px;
-}
-footer .footer-2{
-    color: white;
-    text-align: center;
-    width: 25%;
-    height: 300px;
-}
-footer .footer-2 a{
-    font-size: 15px;
-    display: block;
-    margin-bottom: 5%;
-    color: white;
-}
-footer .footer-2  span{
-    display: inline-block;
-    margin-bottom: 10%;
-}
-footer .footer-3{
-    color: white;
-    text-align: center;
-    width: 25%;
-    height: 300px;
-}
-footer .footer-3 a{
-    font-size: 15px;
-    display: block;
-    margin-bottom: 5%;
-    color: white;
-}
-footer .footer-3  span{
-    display: inline-block;
-    margin-bottom: 10%;
-}
-footer .footer-4{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    height: 300px;
-}
-footer .footer-4 a{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 16px;
-    color: white;
-    padding-left: 10px;
-}
-footer .footer-4 img{
-    width: 40px;
-}
-.card{
-    background-color: #F2F2F2;
-    
-    width: 400px;
-    height: 500px;
-    border-radius: 26px;
-    margin: 5px;
-}
-.card .contenido a{
-    color: #222222;
-    display: inline-block;
-    margin: 0px 0px 15px 15px;
-}
-.card-chica{
-    background-color: #F2F2F2;
-    
-    width: 400px;
-    height: 400px;
-    border-radius: 36px;
-    margin: 5px;
-}
-.card-grande{
-    background-color: #F2F2F2;
-    
-    width: 800px;
-    height: 800px;
-    border-radius: 36px;
-    margin: 5px;
-}
-.contenido{
-    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:100% 70%;
-    width: 100%; /*importante aclarar el tamano de la carta para poder centrar y demas. */
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: start;
-    
-}
 /* Medias Queries  */
-
-
 /* tablet */
-@media (max-width:768px) {
-    .accesorio img{
-        width: 150px;
-        height: 150px;
-    }
-    .alimento a img{
-        width: 150px;
-        height: 150px
-    }
-    .accesorio{
-        flex-wrap: nowrap;
-    }
-    .accesorio:nth-child(1){
-        height: 85%;
-    }
-    .accesorio:nth-child(2){
-        height: 85%;
-    }
-    
-    .accesorio:nth-child(3) img{
-        width: 100%;
-        height: 85%;
-        background-color: black;
-    }
-}
-/* Movil L */
-@media (max-width:426px) {
-    *{
-        font-size: 11px;
-    }
-    .alimento a img {
-        width: 100px;
-        height: 100px;
-    }
-    .accesorio img{
-        width: 80px;
-        height: 80px;
-    }
-    main section .conteiner .info1{
-        height: 250px;
-    }
-    main section .conteiner .info2{
-        height: 250px;
-    }
-    main section .conteiner .info3{
-        height: 250px;
-    }
-    main section .conteiner .info2 .info2-nuestrahistoria{
-        padding: 5px;
-    }
-    main .instagram .conteiner-instagram-fotos .instagram-foto{
-        height: 100px;
-    }
-    footer .footer-1 p{
-        font-size: 10px;
-    }
-    footer .footer-1 img{
-        width: 20px;
-    }
-    footer .footer-1 .correo span{
-        font-size: 10px;
-    }
-    footer .footer-2 a{
-        font-size: 10px;
-    }
-    footer .footer-3 a{
-        font-size: 10px;
-    }
-    footer .footer-4 a{
-        font-size: 10px;
-    }
-    footer .footer-4 img {
-        width: 20px;
-    }
+@media (max-width: 768px) {
+  .productos .alimentos .alimento a img {
+    width: 150px;
+    height: 150px; }
+  .accesorios .conteiner-accesorios .accesorio {
+    flex-wrap: nowrap; }
+    .accesorios .conteiner-accesorios .accesorio a img {
+      width: 150px;
+      height: 150px; }
+  .accesorios .conteiner-accesorios .accesorio:nth-child(1) {
+    height: 85%; }
+  .accesorios .conteiner-accesorios .accesorio:nth-child(2) {
+    height: 85%; }
+  .accesorios .conteiner-accesorios .accesorio:nth-child(3) img {
+    width: 100%;
+    height: 85%;
+    background-color: black; } }
 
-}
+/* Movil L */
+@media (max-width: 426px) {
+  * {
+    font-size: 11px; }
+  .productos .alimentos .alimento a img {
+    width: 100px;
+    height: 100px; }
+  .accesorios .conteiner-accesorios .accesorio a img {
+    width: 80px;
+    height: 80px; }
+  main section .conteiner .info1 {
+    height: 250px; }
+  main section .conteiner .info2 {
+    height: 250px; }
+    main section .conteiner .info2 .info2-nuestrahistoria {
+      padding: 5px; }
+  main section .conteiner .info3 {
+    height: 250px; }
+  main .instagram .conteiner-instagram-fotos .instagram-foto {
+    height: 100px; }
+  footer .footer-1 .correo span {
+    font-size: 10px; }
+  footer .footer-1 p {
+    font-size: 10px; }
+  footer .footer-1 img {
+    width: 20px; }
+  footer .footer-2 a {
+    font-size: 10px; }
+  footer .footer-3 a {
+    font-size: 10px; }
+  footer .footer-4 a {
+    font-size: 10px; }
+  footer .footer-4 img {
+    width: 20px; } }
+
 /* Movil M */
-@media (max-width:376px) {
-    *{
-        font-size: 9px;
-    }
-    
-    .accesorio img{
-        width: 80px;
-        height: 80px;
-    }
-    
-}
+@media (max-width: 376px) {
+  * {
+    font-size: 9px; }
+  .accesorios .conteiner-accesorios .accesorio a img {
+    width: 80px;
+    height: 80px; } }
+
 /* Movil S */
-@media (max-width:321px) {
-    *{
-        font-size: 7px;
-    }
-    main section .conteiner .info2 .info2-nuestrahistoria span{
-        font-size: 7px;
-    }
-    main section .conteiner .info3 .boton{
-        width: 78px;
-    }
-    .accesorio img{
-        width: 70px;
-        height: 70px;
-    }
-    footer .footer-1 p{
-        font-size: 7px;
-    }
-    footer .footer-1 img{
-        width: 10px;
-    }
-    footer .footer-1 .correo span{
-        font-size: 7px;
-    }
-    footer .footer-2 a{
-        font-size: 7px;
-    }
-    footer .footer-3 a{
-        font-size: 7px;
-    }
-    footer .footer-4 a{
-        font-size: 7px;
-    }
-    footer .footer-4 img {
-        width: 10px;
-    }
-    
-}
+@media (max-width: 321px) {
+  * {
+    font-size: 7px; }
+  main .historia .conteiner .info2 .info2-nuestrahistoria span {
+    font-size: 7px; }
+  main .instagram .header-seccion h2 {
+    font-size: 12px; }
+  main .historia .conteiner .info3 .boton {
+    width: 58px; }
+  .accesorios .conteiner-accesorios .accesorio a img {
+    width: 70px;
+    height: 70px; }
+  footer .footer-1 .correo span {
+    font-size: 7px; }
+  footer .footer-1 p {
+    font-size: 7px; }
+  footer .footer-1 img {
+    width: 10px; }
+  footer .footer-2 a {
+    font-size: 7px; }
+  footer .footer-3 a {
+    font-size: 7px; }
+  footer .footer-4 a {
+    font-size: 7px; }
+  footer .footer-4 img {
+    width: 10px; } }

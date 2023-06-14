@@ -1,0 +1,47 @@
+main{
+    .header-seccion{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    section{
+        .boton{
+            background-color: $color-verde;
+            border: $color-verde;
+            border-radius: 36px;
+            width: 100px;
+            height: 40px;
+        }
+        .conteiner-alimentos{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+        .card{
+            background-color: #F2F2F2;
+            
+            width: 400px;
+            height: 500px;
+            border-radius: 26px;
+            margin: 5px;
+            .contenido{
+                a{
+                    color: #222222;
+                    display: inline-block;
+                    margin: 0px 0px 15px 15px;
+                }
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size:100% 70%;
+                width: 100%; /*importante aclarar el tamano de la carta para poder centrar y demas. */
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: start;
+                
+            }
+        }
+    }
+}

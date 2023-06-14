@@ -1,0 +1,12 @@
+@import "./utilities/variables";
+@import "./utilities/mixins";
+
+@import "./base/reset";
+@import "./layout/header";
+@import "./layout/main-index";
+@import"./layout/main-alimentos";
+@import"./layout/main-contacto";
+@import"./layout/main-faqs";
+@import"./layout/main-producto";
+@import "./layout/footer";
+@import "./layout/mediaqueries"

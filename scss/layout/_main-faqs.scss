@@ -1,0 +1,21 @@
+main{
+    section{
+        .conteiner-faqs{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+            h2{
+                font-size: 36px;
+            }
+            h3{
+                margin-top: 15px;
+            }
+        }
+        .faqs-parrafo {
+            width: 70%;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+    }
+}
