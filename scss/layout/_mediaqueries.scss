@@ -3,6 +3,43 @@
 
 /* tablet */
 @media (max-width:768px) {
+    header{
+        .cerrar-menu{
+            display: block;
+            border: 0;
+            font-size: 30px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        .abrir-menu {display: block;
+            border: 0;
+            font-size: 30px;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        
+        .categorias{
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 255);
+            box-shadow: 0 0 0 100vmax rgba(0, 0, 0 , .3);
+            
+            
+            ul{
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+        .categorias.visible{
+            opacity: 1;
+            visibility: visible;
+        }
+        
+    }
     .productos{
         .alimentos{
             .alimento{
@@ -15,6 +52,19 @@
             }
         }
     }
+    main{
+        section{
+            .conteiner-info{
+                .producto-info2{
+                    p{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    
+    
     .accesorios{
         .conteiner-accesorios{
             .accesorio{
@@ -43,6 +93,15 @@
             }
         }
         
+    }
+    main{
+        section{
+            .conteiner-producto{
+                .producto{
+                    height: 400px;
+                }
+            }
+        }
     }
 }
 /* Movil L */
@@ -87,13 +146,24 @@
     }
     main {
         section{
+            
             .conteiner{
                 .info2{
                     height: 250px;
                     .info2-nuestrahistoria{
                         padding: 5px;
+                        margin: 0 10px 0 10px;
                     }
+                    
                 }
+                .info3{
+                    .boton{
+                        width: 60px;
+                        height: 40px;
+                    }
+                    
+                }
+                
             }
         }
     }
@@ -111,6 +181,26 @@
             .conteiner-instagram-fotos{
                 .instagram-foto{
                     height: 100px;
+                }
+            }
+        }
+    }
+    main{
+        section{
+            .conteiner-info{
+                .producto-info2{
+                    p{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    main{
+        section{
+            .conteiner-producto{
+                .producto{
+                    height: 300px;
                 }
             }
         }
@@ -174,7 +264,7 @@
 /* Movil S */
 @media (max-width:321px) {
     *{
-        font-size: 7px;
+        font-size: 11px;
     }
     main{
         .historia{
@@ -208,6 +298,17 @@
             }
             
         }
+        main{
+            section{
+                .conteiner-info{
+                    .producto-info2{
+                        p{
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+        }
     .accesorios{
         .conteiner-accesorios{
             .accesorio{
@@ -221,6 +322,15 @@
             }
         }
         
+    }
+    main{
+        section{
+            .conteiner-producto{
+                .producto{
+                    height: 300px;
+                }
+            }
+        }
     }
     footer{
         .footer-1{

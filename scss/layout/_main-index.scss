@@ -1,4 +1,8 @@
+
 main{
+    .slider{
+        height: 100vh;
+    }
     a{
         color: black;
     }
@@ -70,7 +74,6 @@ main{
         "accesorios";
     }
     .historia{
-        width: 100%;
         margin: 15px;
         @include flex(row, no-wrap, center, center, 0px);
         .conteiner{
